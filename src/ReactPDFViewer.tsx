@@ -32,18 +32,18 @@ const ReactPDFViewer = () => {
     }
 
     return (
-        <div>
+        <div className='bg-white min-h-screen '>
             <input type="file" onChange={uploadFile} id='pdf-file' />
             {
                 fileuploaded && (
                     <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
                         <div
-                            style={{
-                                height: '750px',
-                                width: '900px',
-                                marginLeft: 'auto',
-                                marginRight: 'auto',
-                            }}
+                            // style={{
+                            //     height: '750px',
+                            //     width: '900px',
+                            //     marginLeft: 'auto',
+                            //     marginRight: 'auto',
+                            // }}
                         >
                             <Viewer fileUrl={file as string} plugins={[defaultLayoutPluginInstance, pageNavigationPluginInstance, bookmarkPluginInstance,toolbarPluginInstance]} />
                         </div>
